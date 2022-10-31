@@ -89,7 +89,7 @@ export function HelpUs() {
           >
             Veja como podemos lhe ajudar
           </Heading>
-          <SimpleGrid columns={{ base: 2, md: 1 }} spacing={{ base: 6, lg: 6 }}>
+          <SimpleGrid columns={{ base: 1, md: 1 }} spacing={{ base: 1, lg: 6 }}>
             <Box
               borderWidth="1px"
               borderRadius="lg"
@@ -120,7 +120,7 @@ export function HelpUs() {
                   <h2>
                     <AccordionButton>
                       <Box flex="1" textAlign="left">
-                        Section 2 title
+                        <FcSignature size={"3em"} />
                       </Box>
                       <AccordionIcon />
                     </AccordionButton>
