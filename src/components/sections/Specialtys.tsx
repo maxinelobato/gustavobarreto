@@ -28,11 +28,11 @@ function StatsCard(props: StatsCardProps) {
 
   return (
     <Stat
+      px={{ base: 2, md: 4 }}
+      py={"5"}
       backdropFilter="auto"
       backdropBlur="1rem"
       bgColor={"whiteAlpha.50"}
-      px={{ base: 2, md: 4 }}
-      py={"5"}
       shadow={"xl"}
       border={"1px solid"}
       borderColor={borderColor}
@@ -69,7 +69,7 @@ export function Specialty() {
           as={Box}
           textAlign={"center"}
           spacing={{ base: 8, md: 14 }}
-          py={{ base: 12, md: 14, lg: 16 }}
+          py={{ base: 20, md: 14, lg: 16 }}
         >
           <SimpleGrid columns={{ base: 2, md: 5 }} spacing={{ base: 5, lg: 5 }}>
             <StatsCard

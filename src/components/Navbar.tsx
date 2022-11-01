@@ -9,6 +9,7 @@ import {
   Container,
   Text,
   useBreakpointValue,
+  Link,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -22,14 +23,7 @@ export function Navbar() {
   return (
     <>
       <Box color={color}>
-        <Box
-          px={4}
-          backdropFilter="auto"
-          backdropBlur="1rem"
-          w={"full"}
-          position={"fixed"}
-          zIndex={2}
-        >
+        <Box px={4} w={"full"} position={"absolute"} zIndex={2}>
           <Container maxW="7xl">
             <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
               <Flex
@@ -71,7 +65,13 @@ export function Navbar() {
                     _hover={{ bgColor: "blue.800", color: "whiteAlpha" }}
                     leftIcon={<IoLogoWhatsapp size={22} />}
                   >
-                    (13) 97408-6149
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      href="https://api.whatsapp.com/send?phone=5513974086149&text=Ol%C3%A1%2C%20Dr.%20Gustavo!%20Vim%20do%20seu%20site.%20Podemos%20conversar%3F"
+                      isExternal
+                    >
+                      (13) 97408-6149
+                    </Link>
                   </Button>
                   <Button
                     bgColor="#142F3E"

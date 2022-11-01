@@ -26,7 +26,7 @@ export function About() {
           >
             <Heading
               fontWeight={700}
-              fontSize={{ base: "3xl", sm: "4xl", md: "7xl" }}
+              fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
               lineHeight={"110%"}
             >
               Procurando um Advogado Empresarial Especialista <br />

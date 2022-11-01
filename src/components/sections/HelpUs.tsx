@@ -8,15 +8,14 @@ import {
   Container,
   Flex,
   Heading,
+  Icon,
   SimpleGrid,
   Stack,
-  Stat,
-  StatLabel,
-  StatNumber,
+  Text,
   useColorModeValue,
-  VStack,
 } from "@chakra-ui/react";
-import { ReactNode } from "react";
+import { ReactElement } from "react";
+
 import {
   FcIdea,
   FcInspection,
@@ -25,48 +24,25 @@ import {
   FcSignature,
   FcConferenceCall,
 } from "react-icons/fc";
+import { ButtonCta } from "../ButtonCta";
 
-interface StatsCardProps {
-  title: string;
-  stat: string;
-  icon: ReactNode;
+interface FeatureProps {
+  text: string;
+  icon?: ReactElement;
 }
-function StatsCard(props: StatsCardProps) {
-  const { title, stat, icon } = props;
-  const borderColor = useColorModeValue("whiteAlpha.100", "whiteAlpha.200");
-  const color = useColorModeValue("whiteAlpha.800", "whiteAlpha.900");
 
+const Feature = ({ text, icon }: FeatureProps) => {
   return (
-    <Stat
-      backdropFilter="auto"
-      backdropBlur="1rem"
-      bgColor={"whiteAlpha.50"}
-      px={{ base: 2, md: 4 }}
-      py={"5"}
-      shadow={"xl"}
-      border={"1px solid"}
-      borderColor={borderColor}
-      rounded={"lg"}
-    >
-      <Flex
-        justifyContent={{ base: "center", md: "center" }}
-        direction={{ base: "column-reverse", md: "column" }}
-      >
-        <Box alignContent="center">
-          <StatLabel fontWeight={"medium"}>{title}</StatLabel>
-          <StatNumber fontSize={"lg"} fontWeight={"medium"}>
-            {stat}
-          </StatNumber>
-        </Box>
-        <VStack>
-          <Box pt={6} my={"auto"} color={color}>
-            {icon}
-          </Box>
-        </VStack>
+    <Stack direction={"row"} align={"center"} justifyContent={"center"}>
+      <Flex w={16} h={16} align={"center"} justify={"center"} rounded={"full"}>
+        {icon}
       </Flex>
-    </Stat>
+      <Text fontWeight={600} align={"center"}>
+        {text}
+      </Text>
+    </Stack>
   );
-}
+};
 
 export function HelpUs() {
   const bg = useColorModeValue("blue.800", "#142F3E");
@@ -91,80 +67,190 @@ export function HelpUs() {
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 1 }} spacing={{ base: 1, lg: 6 }}>
             <Box
-              borderWidth="1px"
               borderRadius="lg"
               overflow="hidden"
               backdropFilter="auto"
               backdropBlur="1rem"
               bgColor={"whiteAlpha.50"}
+              shadow={"xl"}
+              rounded={"lg"}
             >
               <Accordion defaultIndex={[0]} allowMultiple>
                 <AccordionItem>
                   <h2>
                     <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        <FcIdea size={"3em"} />
+                      <Box flex="1" textAlign="center">
+                        <Stack spacing={2}>
+                          <Feature
+                            icon={<Icon as={FcIdea} w={16} h={16} />}
+                            text={"Ideação: Viabilidade Jurídica da Ideia"}
+                          />
+                        </Stack>
                       </Box>
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
                   <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    A ideia é lícita? <br />
+                    Existe alguma lei que a define? <br />
+                    Existe alguma lei que a proíbe? <br />
+                    Esse tipo de negócio é regulamentado? <br />
+                    Existe a obrigação de ter alguma certificação ou registro em
+                    algum órgão? <br />
+                    Consigo desenvolver a regulamentação junto ao legislativo?{" "}
+                    <br />
+                    <b>
+                      SERVIÇOS: Pesquisa de viabilidade jurídica + viabilidade
+                      de construção legislativa
+                    </b>
                   </AccordionPanel>
                 </AccordionItem>
 
                 <AccordionItem>
                   <h2>
                     <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        <FcSignature size={"3em"} />
+                      <Box flex="1" textAlign="center">
+                        <Stack spacing={2}>
+                          <Feature
+                            icon={<Icon as={FcSignature} w={16} h={16} />}
+                            text={
+                              "Formação: Ainda não é a hora de registrar a empresa"
+                            }
+                          />
+                        </Stack>
                       </Box>
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
                   <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Vai empreender sozinho? <br />
+                    Vai ter sócios? <br />
+                    Qual o time ideal para colocar a ideia em prática? <br />
+                    <b>
+                      SERVIÇO: Elaboração de um MoU (memorando de entendimentos
+                      entre sócios)
+                    </b>
+                  </AccordionPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton>
+                      <Box flex="1" textAlign="center">
+                        <Stack spacing={2}>
+                          <Feature
+                            icon={<Icon as={FcSettings} w={16} h={16} />}
+                            text={
+                              "Criação/Tração: O negócio já possui viabilidade jurídica, o empreendedor coloca a mão na massa para resolver uma dor do mercado "
+                            }
+                          />
+                        </Stack>
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4}>
+                    Como contratar desenvolvedores, programadores, designers e
+                    outros prestadores de serviços? <br />
+                    <b>
+                      SERVIÇOS: Contratos com terceiros + Contratos de vesting +
+                      Formalizar cessão dos direitos autorais de software Como
+                      falar do projeto para essas e outras pessoas (como
+                      investidores) sem que a "ideia" seja divulgada?{" "}
+                    </b>
+                    <br />
+                    <b> SERVIÇO: Termos/cláusulas de confidencialidade </b>
+                  </AccordionPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton>
+                      <Box flex="1" textAlign="center">
+                        <Stack spacing={2}>
+                          <Feature
+                            icon={<Icon as={FcInspection} w={16} h={16} />}
+                            text={
+                              "Validação: Testes moderados do MVP (Produto Mínimo Viável) no mercado"
+                            }
+                          />
+                        </Stack>
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4}>
+                    <b>
+                      SERVIÇOS: Formalizar a empresa (tipo societário e regime
+                      de tributação) + Busca prévia INPI + Registrar
+                      marca/patente.
+                    </b>
+                  </AccordionPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton>
+                      <Box flex="1" textAlign="center">
+                        <Stack spacing={2}>
+                          <Feature
+                            icon={<Icon as={FcPositiveDynamic} w={16} h={16} />}
+                            text={
+                              "Operação/Escala: Oferecimento ao público em grande escala"
+                            }
+                          />
+                        </Stack>
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4}>
+                    Relacionamento com clientes. <br />
+                    <b>SERVIÇOS: Termo de Uso + Política de Privacidade</b>{" "}
+                    <br />
+                    Formalização dos negócios. <br />
+                    <b>
+                      SERVIÇOS: Compliance + Governança (trabalhista, dados,
+                      etc).
+                    </b>
+                  </AccordionPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton>
+                      <Box flex="1" textAlign="center">
+                        <Stack spacing={2}>
+                          <Feature
+                            icon={<Icon as={FcConferenceCall} w={16} h={16} />}
+                            text={
+                              "Investidores: O mercado quer fazer parte do negócio"
+                            }
+                          />
+                        </Stack>
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4}>
+                    Relação com investidores. <br />
+                    <b>
+                      SERVIÇOS: Inclusão de sócio no capital social; <br />
+                      Estruturação da Sociedade em conta de participação; <br />
+                      Contrato de Mútuo conversível; <br />
+                      Estruturação de Equity Crowdfunding; <br />
+                      Contrato de Opção de compra; <br />
+                      Contrato de participação; <br />
+                      Term Sheet ou Carta de Intenções; <br />
+                      Processo de auditoria (Due Diligence) <br />
+                    </b>
+                    Obs: Podem haver investimentos em outras fases
                   </AccordionPanel>
                 </AccordionItem>
               </Accordion>
             </Box>
-            {/* <StatsCard
-              title={"Viabilidade Jurídica"}
-              stat={"Ideação"}
-              icon={<FcIdea size={"3em"} />}
-            />
-            <StatsCard
-              title={"Memorando Societário"}
-              stat={"Formação"}
-              icon={<FcSignature size={"3em"} />}
-            />
-            <StatsCard
-              title={"Resolução de Problemas"}
-              stat={"Criação/Tração"}
-              icon={<FcSettings size={"3em"} />}
-            />
-            <StatsCard
-              title={"Produto Mínimo Viável"}
-              stat={"Validação"}
-              icon={<FcInspection size={"3em"} />}
-            />
-            <StatsCard
-              title={"Oferecimento ao Público"}
-              stat={"Operação/Escala"}
-              icon={<FcPositiveDynamic size={"3em"} />}
-            />
-            <StatsCard
-              title={"Mercado Faz Parte"}
-              stat={"Startups"}
-              icon={<FcConferenceCall size={"3em"} />}
-            /> */}
           </SimpleGrid>
+          <ButtonCta />
         </Stack>
       </Container>
     </Box>

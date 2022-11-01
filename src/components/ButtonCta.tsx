@@ -1,4 +1,4 @@
-import { Button, Stack } from "@chakra-ui/react";
+import { Button, Link, Stack } from "@chakra-ui/react";
 
 export function ButtonCta() {
   return (
@@ -20,7 +20,13 @@ export function ButtonCta() {
           color: "whiteAlpha.900",
         }}
       >
-        fale com o especialista
+        <Link
+          style={{ textDecoration: "none" }}
+          href="https://api.whatsapp.com/send?phone=5513974086149&text=Ol%C3%A1%2C%20Dr.%20Gustavo!%20Vim%20do%20seu%20site.%20Podemos%20conversar%3F"
+          isExternal
+        >
+          fale com o especialista
+        </Link>
       </Button>
     </Stack>
   );
