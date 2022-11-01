@@ -24,13 +24,14 @@ export function CTAScrollToTop() {
       <Tooltip
         backdropFilter="auto"
         backdropBlur="1rem"
-        bgColor={"whiteAlpha.50"}
+        rounded="md"
+        bgColor={"blackAlpha.500"}
         shadow={"xl"}
         border={"1px solid"}
         color={color}
         borderColor={borderColor}
-        label="Fale Com o Especialista"
-        placement="left"
+        label="Fale Comigo"
+        placement="top"
         isOpen
       >
         <Link
