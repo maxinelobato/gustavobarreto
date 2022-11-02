@@ -75,7 +75,7 @@ export function HelpUs() {
               shadow={"xl"}
               rounded={"lg"}
             >
-              <Accordion defaultIndex={[0]} allowMultiple>
+              <Accordion allowToggle>
                 <AccordionItem>
                   <h2>
                     <AccordionButton>

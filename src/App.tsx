@@ -3,7 +3,7 @@ import { About } from "./components/sections/About";
 import { Footer } from "./components/sections/Footer";
 import { GoogleMaps } from "./components/sections/GoogleMaps";
 import { Gustavo } from "./components/sections/Gustavo";
-// import { HelpUs } from "./components/sections/HelpUs";
+import { HelpUs } from "./components/sections/HelpUs";
 import { Specialty } from "./components/sections/Specialtys";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <About />
       <Specialty />
-      {/* <HelpUs /> */}
+      <HelpUs />
       <Gustavo />
       <Footer />
       <GoogleMaps />
