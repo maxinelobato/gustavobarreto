@@ -1,16 +1,10 @@
 import {
   AspectRatio,
-  Box,
   Container,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 export function GoogleMaps() {
-  const bg = useColorModeValue("blue.800", "#142F3E");
-  const color = useColorModeValue("whiteAlpha.800", "whiteAlpha.900");
-
   return (
-    <Box bg={bg} color={color} py={{ base: 10, md: 12 }}>
       <Container maxW={"7xl"}>
         <AspectRatio ratio={{ base: 16 / 8, md: 16 / 6, lg: 16 / 4 }}>
           <iframe
@@ -24,6 +18,5 @@ export function GoogleMaps() {
           />
         </AspectRatio>
       </Container>
-    </Box>
   );
 }

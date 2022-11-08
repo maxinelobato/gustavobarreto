@@ -18,7 +18,8 @@ import imgLogo2 from "../assets/img/logobrancapequena.svg";
 
 export function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
-  const color = useColorModeValue("whiteAlpha.800", "whiteAlpha.900");
+  const bg = useColorModeValue("brandblue.500", "brandblue.600");
+  const color = useColorModeValue("brandbeige.100", "brandbeige.200");
 
   return (
     <>
@@ -60,8 +61,8 @@ export function Navbar() {
               <Flex alignItems={"center"}>
                 <Stack direction={"row"} spacing={2}>
                   <Button
-                    bgColor="#142F3E"
-                    boxShadow={"0px 0px 4px 0px rgb(255 255 225 / 80%)"}
+                  variant={"outline"}
+                    bgColor={bg}
                     _hover={{ bgColor: "blue.800", color: "whiteAlpha" }}
                     leftIcon={<IoLogoWhatsapp size={22} />}
                   >
@@ -74,8 +75,8 @@ export function Navbar() {
                     </Link>
                   </Button>
                   <Button
-                    bgColor="#142F3E"
-                    boxShadow={"0px 0px 4px 0px rgb(255 255 225 / 80%)"}
+                    variant={"outline"}
+                    bgColor={bg}
                     _hover={{ bgColor: "blue.800", color: "whiteAlpha" }}
                     onClick={toggleColorMode}
                   >

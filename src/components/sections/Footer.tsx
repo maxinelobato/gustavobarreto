@@ -6,28 +6,28 @@ import {
   Link,
   Stack,
   Text,
-  textDecoration,
   useColorModeValue,
-  VisuallyHidden,
-} from "@chakra-ui/react";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { ReactNode } from "react";
-import imgLogo1 from "../../assets/img/logobrancagrande.svg";
+} from '@chakra-ui/react';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { ReactNode } from 'react';
+import imgLogo1 from '../../assets/img/logobrancagrande.svg';
+import { GoogleMaps } from './GoogleMaps';
 
 const SocialButton = ({ children }: { children: ReactNode }) => {
+  const bg = useColorModeValue('brandblue.500', 'brandblue.600');
   return (
     <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
+      bg={bg}
+      rounded={'full'}
       w={8}
       h={8}
-      cursor={"pointer"}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
+      cursor={'pointer'}
+      display={'inline-flex'}
+      alignItems={'center'}
+      justifyContent={'center'}
+      transition={'background 0.3s ease'}
       _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+        bg: useColorModeValue('brandblue.400', 'brandblue.400'),
       }}
     >
       {children}
@@ -36,34 +36,34 @@ const SocialButton = ({ children }: { children: ReactNode }) => {
 };
 
 export function Footer() {
-  const bg = useColorModeValue("blue.800", "#142F3E");
-  const color = useColorModeValue("whiteAlpha.800", "whiteAlpha.900");
+  const bg = useColorModeValue('brandorange.500', 'brandorange.600');
+  const color = useColorModeValue('brandbeige.100', 'brandbeige.200');
 
   return (
     <Box bg={bg} color={color}>
       <Container
         as={Stack}
-        maxW={"7xl"}
+        maxW={'7xl'}
         py={8}
         spacing={4}
-        justify={"center"}
-        align={"center"}
+        justify={'center'}
+        align={'center'}
       >
         <Image height="5rem" width="15rem" src={imgLogo1} />
       </Container>
       <Container
         as={Stack}
-        maxW={"7xl"}
-        direction={{ base: "column", md: "row" }}
+        maxW={'7xl'}
+        direction={{ base: 'column', md: 'row' }}
         spacing={4}
-        justify={{ base: "center", md: "center" }}
-        align={{ base: "center", md: "center" }}
+        justify={{ base: 'center', md: 'center' }}
+        align={{ base: 'center', md: 'center' }}
       >
-        <Stack direction={"row"} spacing={2} pb={8}>
+        <Stack direction={'row'} spacing={2} pb={8}>
           <SocialButton>
             <Link
-              style={{ textDecoration: "none" }}
-              href={"https://www.linkedin.com/in/gustavolimabarreto/"}
+              style={{ textDecoration: 'none' }}
+              href={'https://www.linkedin.com/in/gustavolimabarreto/'}
               isExternal
             >
               <FaLinkedin />
@@ -71,8 +71,8 @@ export function Footer() {
           </SocialButton>
           <SocialButton>
             <Link
-              style={{ textDecoration: "none" }}
-              href={"https://www.instagram.com/glb.advocacia/"}
+              style={{ textDecoration: 'none' }}
+              href={'https://www.instagram.com/glb.advocacia/'}
               isExternal
             >
               <FaInstagram />
@@ -82,18 +82,21 @@ export function Footer() {
       </Container>
       <Container
         as={Stack}
-        maxW={"7xl"}
-        direction={{ base: "column", md: "row" }}
+        maxW={'7xl'}
+        direction={{ base: 'column', md: 'row' }}
         spacing={4}
-        justify={{ base: "center", md: "center" }}
-        align={{ base: "center", md: "center" }}
+        justify={{ base: 'center', md: 'center' }}
+        align={{ base: 'center', md: 'center' }}
       >
-        <Stack direction={"row"} spacing={6} pb={8} justifyContent={"center"}>
-          <Text fontSize={"sm"} textAlign={"center"}>
+        <Stack direction={'row'} spacing={6} pb={8} justifyContent={'center'}>
+          <Text fontSize={'sm'} textAlign={'center'}>
             Santos | São Paulo | Brasil
           </Text>
         </Stack>
       </Container>
+      <Stack direction={'row'} spacing={6} pb={8} justifyContent={'center'}>
+        <GoogleMaps />
+      </Stack>
     </Box>
   );
 }
