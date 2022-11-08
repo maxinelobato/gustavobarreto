@@ -11,7 +11,7 @@ import {
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { ReactNode } from 'react';
 import imgLogo1 from '../../assets/img/logobrancagrande.svg';
-import { GoogleMaps } from './GoogleMaps';
+import { GoogleMaps } from '../GoogleMaps';
 
 const SocialButton = ({ children }: { children: ReactNode }) => {
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');
@@ -89,7 +89,7 @@ export function Footer() {
         align={{ base: 'center', md: 'center' }}
       >
         <Stack direction={'row'} spacing={6} pb={8} justifyContent={'center'}>
-          <Text fontSize={'sm'} textAlign={'center'}>
+          <Text fontSize={'lg'} textAlign={'center'}>
             Santos | São Paulo | Brasil
           </Text>
         </Stack>

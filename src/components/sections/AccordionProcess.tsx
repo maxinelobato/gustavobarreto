@@ -44,7 +44,7 @@ const Feature = ({ text, icon }: FeatureProps) => {
   );
 };
 
-export function HelpUs() {
+export function AccordionProcess() {
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');
   const color = useColorModeValue('brandbeige.100', 'brandbeige.200');
 
@@ -67,18 +67,17 @@ export function HelpUs() {
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 1 }} spacing={{ base: 1, lg: 6 }}>
             <Box
-              borderRadius="lg"
               overflow="hidden"
               backdropFilter="auto"
               backdropBlur="1rem"
-              bgColor={'whiteAlpha.50'}
               shadow={'xl'}
-              rounded={'lg'}
             >
               <Accordion allowToggle>
                 <AccordionItem>
                   <h2>
-                    <AccordionButton>
+                    <AccordionButton
+                      _expanded={{ bg: 'brandorange.600', color: 'brandbeige.200' }}
+                    >
                       <Box flex="1" textAlign="center">
                         <Stack spacing={2}>
                           <Feature
@@ -107,7 +106,9 @@ export function HelpUs() {
 
                 <AccordionItem>
                   <h2>
-                    <AccordionButton>
+                    <AccordionButton
+                      _expanded={{ bg: 'brandorange.600', color: 'brandbeige.200' }}
+                    >
                       <Box flex="1" textAlign="center">
                         <Stack spacing={2}>
                           <Feature
@@ -132,7 +133,9 @@ export function HelpUs() {
 
                 <AccordionItem>
                   <h2>
-                    <AccordionButton>
+                    <AccordionButton
+                      _expanded={{ bg: 'brandorange.600', color: 'brandbeige.200' }}
+                    >
                       <Box flex="1" textAlign="center">
                         <Stack spacing={2}>
                           <Feature
@@ -162,7 +165,9 @@ export function HelpUs() {
 
                 <AccordionItem>
                   <h2>
-                    <AccordionButton>
+                    <AccordionButton
+                      _expanded={{ bg: 'brandorange.600', color: 'brandbeige.200' }}
+                    >
                       <Box flex="1" textAlign="center">
                         <Stack spacing={2}>
                           <Feature
@@ -186,7 +191,9 @@ export function HelpUs() {
 
                 <AccordionItem>
                   <h2>
-                    <AccordionButton>
+                    <AccordionButton
+                      _expanded={{ bg: 'brandorange.600', color: 'brandbeige.200' }}
+                    >
                       <Box flex="1" textAlign="center">
                         <Stack spacing={2}>
                           <Feature
@@ -210,7 +217,9 @@ export function HelpUs() {
 
                 <AccordionItem>
                   <h2>
-                    <AccordionButton>
+                    <AccordionButton
+                      _expanded={{ bg: 'brandorange.600', color: 'brandbeige.200' }}
+                    >
                       <Box flex="1" textAlign="center">
                         <Stack spacing={2}>
                           <Feature

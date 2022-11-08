@@ -1,19 +1,18 @@
-import { Navbar } from "./components/Navbar";
-import { About } from "./components/sections/About";
-import { Footer } from "./components/sections/Footer";
-import { GoogleMaps } from "./components/sections/GoogleMaps";
-import { Gustavo } from "./components/sections/Gustavo";
-import { HelpUs } from "./components/sections/HelpUs";
-import { Specialty } from "./components/sections/Specialtys";
+import { Navbar } from './components/Navbar';
+import { Header } from './components/sections/Header';
+import { Footer } from './components/sections/Footer';
+import { About } from './components/sections/About';
+import { AccordionProcess } from './components/sections/AccordionProcess';
+import { Specialty } from './components/sections/Specialtys';
 
 function App() {
   return (
     <>
       <Navbar />
-      <About />
+      <Header />
       <Specialty />
-      <HelpUs />
-      <Gustavo />
+      <AccordionProcess />
+      <About />
       <Footer />
     </>
   );

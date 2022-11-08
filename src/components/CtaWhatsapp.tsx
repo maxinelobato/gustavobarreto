@@ -5,12 +5,12 @@ import {
   Stack,
   Tooltip,
   useColorModeValue,
-} from "@chakra-ui/react";
-import { FaWhatsapp } from "react-icons/fa";
+} from '@chakra-ui/react';
+import { FaWhatsapp } from 'react-icons/fa';
 
-export function CTAScrollToTop() {
-  const color = useColorModeValue("whiteAlpha.800", "whiteAlpha.900");
-  const borderColor = useColorModeValue("whiteAlpha.100", "whiteAlpha.200");
+export function CtaWhatsapp() {
+  const color = useColorModeValue('whiteAlpha.800', 'whiteAlpha.900');
+  const borderColor = useColorModeValue('whiteAlpha.100', 'whiteAlpha.200');
 
   return (
     <Stack
@@ -25,9 +25,9 @@ export function CTAScrollToTop() {
         backdropFilter="auto"
         backdropBlur="1rem"
         rounded="md"
-        bgColor={"blackAlpha.500"}
-        shadow={"xl"}
-        border={"1px solid"}
+        bgColor={'blackAlpha.500'}
+        shadow={'xl'}
+        border={'1px solid'}
         color={color}
         borderColor={borderColor}
         label="Fale Comigo"
@@ -35,7 +35,7 @@ export function CTAScrollToTop() {
         isOpen
       >
         <Link
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: 'none' }}
           href="https://api.whatsapp.com/send?phone=5513974086149&text=Ol%C3%A1%2C%20Dr.%20Gustavo!%20Vim%20do%20seu%20site.%20Podemos%20conversar%3F"
           isExternal
         >
@@ -48,7 +48,7 @@ export function CTAScrollToTop() {
             h={14}
             shadow="base"
             _hover={{
-              bgColor: "green.600",
+              bgColor: 'green.600',
             }}
             isRound
           >
