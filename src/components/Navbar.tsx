@@ -34,7 +34,6 @@ export function Navbar() {
                 transition={'1.2seg'}
               >
                 <Image
-                  color="accent"
                   height={{ base: 16, md: 16 }}
                   width={{ base: 16, md: 16 }}
                   src={imgLogo2}

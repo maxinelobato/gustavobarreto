@@ -5,7 +5,7 @@ export function BgImage(props: BoxProps) {
   return (
     <Box
       w="100%"
-      h={{ base: '45vh', md: '60vh', lg: '65vh' }}
+      h={{ base: '50vh', md: '60vh', lg: '70vh' }}
       bgImage={imgBG}
       bgSize={'cover'}
       bgPosition={'center center'}
