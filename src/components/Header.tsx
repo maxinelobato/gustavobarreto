@@ -22,7 +22,7 @@ export function Header() {
             as={Box}
             textAlign={'center'}
             spacing={{ base: 4, md: 8 }}
-            py={{ base: 20, md: 36 }}
+            py={{ base: 20, md: 36, lg: 36 }}
           >
             <Heading
               fontWeight={600}
