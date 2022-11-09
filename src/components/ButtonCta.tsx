@@ -1,7 +1,6 @@
 import { Button, Link, Stack, useColorModeValue } from '@chakra-ui/react';
 
 export function ButtonCta() {
-  const bg = useColorModeValue('brandorange.500', 'orange.600');
   const color = useColorModeValue('brandbeige.100', 'brandbeige.200');
 
   return (
@@ -13,14 +12,16 @@ export function ButtonCta() {
       position={'relative'}
     >
       <Button
+        variant={'outline'}
         textTransform="uppercase"
         size="lg"
-        bgColor={bg}
         color={color}
-        boxShadow={'2px -1px 10px 2px rgb(255 255 225 / 80%)'}
+        boxShadow={'lg'}
+        bgGradient="linear(to-r, brandorange.500, brandorange.600)"
         _hover={{
           bgColor: 'orange.400',
           color: 'whiteAlpha.900',
+          transform: 'scale(1.1)',
         }}
       >
         <Link
