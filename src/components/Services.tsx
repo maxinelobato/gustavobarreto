@@ -189,7 +189,7 @@ export function Services() {
                   </AccordionPanel>
                 </AccordionItem>
 
-                <AccordionItem>
+                {/* <AccordionItem>
                   <h2>
                     <AccordionButton
                       _expanded={{ bg: 'brandorange.600', color: 'brandbeige.200' }}
@@ -245,7 +245,7 @@ export function Services() {
                     </b>
                     Obs: Podem haver investimentos em outras fases
                   </AccordionPanel>
-                </AccordionItem>
+                </AccordionItem> */}
               </Accordion>
             </Box>
           </SimpleGrid>
