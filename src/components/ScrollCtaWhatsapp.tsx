@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 import { FaWhatsapp } from 'react-icons/fa';
 
-export function CtaWhatsapp() {
+export function ScrollCtaWhatsapp() {
   const color = useColorModeValue('whiteAlpha.800', 'whiteAlpha.900');
   const borderColor = useColorModeValue('whiteAlpha.100', 'whiteAlpha.200');
 

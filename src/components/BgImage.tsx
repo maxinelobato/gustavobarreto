@@ -1,7 +1,7 @@
 import { Box, BoxProps } from '@chakra-ui/react';
 import imgBG from '../assets/img/startup1.webp';
 
-export function BgBoxImage(props: BoxProps) {
+export function BgImage(props: BoxProps) {
   return (
     <Box
       w="100%"

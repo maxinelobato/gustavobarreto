@@ -1,15 +1,15 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import { CtaWhatsapp } from './components/CtaWhatsapp';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { ScrollCtaWhatsapp } from './components/ScrollCtaWhatsapp';
 
 import theme from './components/theme/index';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <CtaWhatsapp />
+      <ScrollCtaWhatsapp />
       <App />
     </ChakraProvider>
   </React.StrictMode>

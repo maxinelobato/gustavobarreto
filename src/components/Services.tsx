@@ -24,7 +24,7 @@ import {
   FcSignature,
   FcConferenceCall,
 } from 'react-icons/fc';
-import { ButtonCta } from '../ButtonCta';
+import { ButtonCta } from './ButtonCta';
 
 interface FeatureProps {
   text: string;
@@ -44,7 +44,7 @@ const Feature = ({ text, icon }: FeatureProps) => {
   );
 };
 
-export function AccordionProcess() {
+export function Services() {
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');
   const color = useColorModeValue('brandbeige.100', 'brandbeige.200');
 

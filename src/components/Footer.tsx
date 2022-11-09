@@ -10,8 +10,8 @@ import {
 } from '@chakra-ui/react';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { ReactNode } from 'react';
-import imgLogo1 from '../../assets/img/logobrancagrande.svg';
-import { GoogleMaps } from '../GoogleMaps';
+import { GoogleMaps } from './GoogleMaps';
+import imgLogo1 from '../assets/img/logobrancagrande.svg';
 
 const SocialButton = ({ children }: { children: ReactNode }) => {
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');

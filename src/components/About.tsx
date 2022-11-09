@@ -8,8 +8,8 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import imgGustavo from '../../assets/img/gustavo.webp';
-import { ButtonCta } from '../ButtonCta';
+import imgGustavo from '../assets/img/gustavo.webp';
+import { ButtonCta } from './ButtonCta';
 
 export function About() {
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');

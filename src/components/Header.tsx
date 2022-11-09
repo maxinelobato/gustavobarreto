@@ -6,8 +6,8 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { BgBoxImage } from '../BgBoxImage';
-import { ButtonCta } from '../ButtonCta';
+import { BgImage } from './BgImage';
+import { ButtonCta } from './ButtonCta';
 
 export function Header() {
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');
@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <Box bg={bg} color={color}>
-      <BgBoxImage>
+      <BgImage>
         <Container maxW={'7xl'}>
           <Stack
             as={Box}
@@ -44,7 +44,7 @@ export function Header() {
             <ButtonCta />
           </Stack>
         </Container>
-      </BgBoxImage>
+      </BgImage>
     </Box>
   );
 }
