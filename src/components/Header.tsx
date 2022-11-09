@@ -21,26 +21,26 @@ export function Header() {
           <Stack
             as={Box}
             textAlign={'center'}
-            spacing={{ base: 8, md: 14 }}
+            spacing={{ base: 4, md: 8 }}
             py={{ base: 20, md: 36 }}
           >
             <Heading
               fontWeight={600}
-              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+              fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
               lineHeight={'110%'}
             >
               Procurando um Advogado Empresarial Especialista <br />
               <Text as={'span'} textColor={textColor}>
                 em <i>Startup?</i>
               </Text>
+              <Text
+                color={'whiteAlpha.800'}
+                fontWeight={500}
+                fontSize={{ base: 'md', sm: 'lg', md: '2xl' }}
+              >
+                Receba toda a ajuda jurídica necessária para a sua <i>Startup</i>
+              </Text>
             </Heading>
-            <Text
-              color={'whiteAlpha.800'}
-              fontWeight={500}
-              fontSize={{ base: 'md', sm: 'lg', md: '2xl' }}
-            >
-              Receba toda a ajuda jurídica necessária para a sua <i>Startup</i>
-            </Text>
             <ButtonCta />
           </Stack>
         </Container>

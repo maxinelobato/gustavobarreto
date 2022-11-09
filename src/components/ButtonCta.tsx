@@ -5,7 +5,6 @@ export function ButtonCta() {
 
   return (
     <Stack
-      p={2}
       direction={'column'}
       spacing={3}
       align={'center'}
