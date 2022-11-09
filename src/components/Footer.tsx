@@ -12,6 +12,7 @@ import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { ReactNode } from 'react';
 import { GoogleMaps } from './GoogleMaps';
 import imgLogo1 from '../assets/img/logobrancagrande.svg';
+import { EmailIcon } from '@chakra-ui/icons';
 
 const SocialButton = ({ children }: { children: ReactNode }) => {
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');
@@ -40,7 +41,7 @@ export function Footer() {
   const color = useColorModeValue('brandbeige.100', 'brandbeige.200');
 
   return (
-    <Box bg={bg} color={color}>
+    <Box bgGradient={'linear(to-r, brandorange.500, brandorange.600)'} color={color}>
       <Container
         as={Stack}
         maxW={'7xl'}
@@ -67,6 +68,15 @@ export function Footer() {
               isExternal
             >
               <FaLinkedin />
+            </Link>
+          </SocialButton>
+          <SocialButton>
+            <Link
+              style={{ textDecoration: 'none' }}
+              href={'gustavobarreto@glbadvocacia.com.br'}
+              isExternal
+            >
+              <EmailIcon />
             </Link>
           </SocialButton>
           <SocialButton>
