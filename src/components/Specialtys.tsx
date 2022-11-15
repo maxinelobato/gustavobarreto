@@ -21,6 +21,7 @@ interface StatsCardProps {
   stat: string;
   icon: ReactNode;
 }
+
 function StatsCard(props: StatsCardProps) {
   const { title, stat, icon } = props;
   const color = useColorModeValue('brandbeige.100', 'brandbeige.200');

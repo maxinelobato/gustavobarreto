@@ -12,8 +12,7 @@ export function ButtonCta() {
       position={'relative'}
     >
       <Button
-        variant={'outline'}
-        textTransform="uppercase"
+        fontWeight={'medium'}
         size="lg"
         color={color}
         boxShadow={'lg'}
@@ -26,10 +25,10 @@ export function ButtonCta() {
       >
         <Link
           style={{ textDecoration: 'none' }}
-          href="https://web.whatsapp.com/send?phone=5513996680686&text=Ol%C3%A1%2C%20Dr.%20Gustavo!%20Vim%20do%20seu%20site.%20Podemos%20conversar%3F"
+          href="https://api.whatsapp.com/send?phone=5513996680686&text=Ol%C3%A1%2C%20Dr.%20Gustavo!%20Vim%20do%20seu%20site.%20Podemos%20conversar%3F"
           isExternal
         >
-          fale com o especialista
+          Fale com o Especialista
         </Link>
       </Button>
     </Stack>

@@ -8,11 +8,10 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaMailBulk } from 'react-icons/fa';
 import { ReactNode } from 'react';
-import { GoogleMaps } from './GoogleMaps';
+// import { GoogleMaps } from './GoogleMaps';
 import imgLogo1 from '../assets/img/logobrancagrande.svg';
-import { EmailIcon } from '@chakra-ui/icons';
 
 const SocialButton = ({ children }: { children: ReactNode }) => {
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');
@@ -29,6 +28,9 @@ const SocialButton = ({ children }: { children: ReactNode }) => {
       transition={'background 0.3s ease'}
       _hover={{
         bg: useColorModeValue('brandblue.400', 'brandblue.400'),
+        transform: 'scale(1.1)',
+        border: '1px',
+        borderColor: 'whiteAlpha.900',
       }}
     >
       {children}
@@ -37,7 +39,6 @@ const SocialButton = ({ children }: { children: ReactNode }) => {
 };
 
 export function Footer() {
-  const bg = useColorModeValue('brandorange.500', 'brandorange.600');
   const color = useColorModeValue('brandbeige.100', 'brandbeige.200');
 
   return (
@@ -76,7 +77,7 @@ export function Footer() {
               href={'gustavobarreto@glbadvocacia.com.br'}
               isExternal
             >
-              <EmailIcon />
+              <FaMailBulk />
             </Link>
           </SocialButton>
           <SocialButton>
@@ -104,9 +105,9 @@ export function Footer() {
           </Text>
         </Stack>
       </Container>
-      <Stack direction={'row'} spacing={6} pb={8} justifyContent={'center'}>
+      {/* <Stack direction={'row'} spacing={6} pb={8} justifyContent={'center'}>
         <GoogleMaps />
-      </Stack>
+      </Stack> */}
     </Box>
   );
 }

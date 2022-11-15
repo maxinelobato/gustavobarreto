@@ -36,7 +36,7 @@ export function ScrollCtaWhatsapp() {
       >
         <Link
           style={{ textDecoration: 'none' }}
-          href="https://web.whatsapp.com/send?phone=5513996680686&text=Ol%C3%A1%2C%20Dr.%20Gustavo!%20Vim%20do%20seu%20site.%20Podemos%20conversar%3F"
+          href="https://api.whatsapp.com/send?phone=5513996680686&text=Ol%C3%A1%2C%20Dr.%20Gustavo!%20Vim%20do%20seu%20site.%20Podemos%20conversar%3F"
           isExternal
         >
           <IconButton
@@ -49,6 +49,9 @@ export function ScrollCtaWhatsapp() {
             shadow="base"
             _hover={{
               bgColor: 'green.600',
+              transform: 'scale(1.1)',
+              border: '1px',
+              borderColor: 'whiteAlpha.900',
             }}
             isRound
           >
