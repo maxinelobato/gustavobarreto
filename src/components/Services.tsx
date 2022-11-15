@@ -13,7 +13,6 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { ReactElement } from 'react';
 import { FcIdea, FcInspection, FcSettings, FcSignature } from 'react-icons/fc';
 import { ButtonCta } from './ButtonCta';
 
@@ -39,7 +38,7 @@ export function Services() {
           >
             Veja como podemos lhe ajudar
           </Heading>
-          <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 6, lg: 12 }}>
+          <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 5, lg: 5 }}>
             <Flex
               py={{ base: 10, md: 14, lg: 16 }}
               mt={-10}
