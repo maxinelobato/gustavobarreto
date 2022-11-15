@@ -1,16 +1,8 @@
 import { CheckIcon } from '@chakra-ui/icons';
 import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
   Box,
-  Button,
   Card,
   CardBody,
-  CardFooter,
-  CardHeader,
   Container,
   Flex,
   Heading,
@@ -24,25 +16,6 @@ import {
 import { ReactElement } from 'react';
 import { FcIdea, FcInspection, FcSettings, FcSignature } from 'react-icons/fc';
 import { ButtonCta } from './ButtonCta';
-import { CardServices } from './CardServices';
-
-interface FeatureProps {
-  text: string;
-  icon?: ReactElement;
-}
-
-const Feature = ({ text, icon }: FeatureProps) => {
-  return (
-    <Stack direction={'row'} align={'center'} justifyContent={'center'}>
-      <Flex w={16} h={16} align={'center'} justify={'center'} rounded={'full'}>
-        {icon}
-      </Flex>
-      <Text fontWeight={600} align={'center'}>
-        {text}
-      </Text>
-    </Stack>
-  );
-};
 
 export function Services() {
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');
