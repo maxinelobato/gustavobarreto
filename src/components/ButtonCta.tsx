@@ -28,7 +28,7 @@ export function ButtonCta() {
           href="https://api.whatsapp.com/send?phone=5513996680686&text=Ol%C3%A1%2C%20Dr.%20Gustavo!%20Vim%20do%20seu%20site.%20Podemos%20conversar%3F"
           isExternal
         >
-          Fale com o Especialista
+          Fale com o Gustavo
         </Link>
       </Button>
     </Stack>
