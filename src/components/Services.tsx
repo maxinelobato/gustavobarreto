@@ -20,9 +20,7 @@ import {
   FcIdea,
   FcInspection,
   FcSettings,
-  FcSignature,
   FcCheckmark,
-  FcBusiness,
   FcConferenceCall,
 } from 'react-icons/fc';
 import { ButtonCta } from './ButtonCta';
