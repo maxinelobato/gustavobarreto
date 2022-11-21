@@ -12,7 +12,7 @@ export function ButtonCta() {
       position={'relative'}
     >
       <Button
-        fontWeight={'medium'}
+        fontWeight={'semibold'}
         size="lg"
         color={color}
         boxShadow={'lg'}
