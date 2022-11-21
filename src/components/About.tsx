@@ -46,7 +46,6 @@ export function About() {
                 colocando à disposição para impulsionar empreendedores a decolarem em
                 seus negócios com segurança e sem burocracia para que possam se
                 concentrar no que realmente importa! Vamos olhar juntos?! <br />
-                <i>Startup</i>
               </Text>
               <Stack pt={6} direction={{ base: 'column', md: 'row' }} spacing={4}>
                 <ButtonCta />

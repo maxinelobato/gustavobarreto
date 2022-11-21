@@ -17,7 +17,7 @@ import imgLogo1 from '../assets/img/logobrancagrande.svg';
 import imgLogo2 from '../assets/img/logobrancapequena.svg';
 
 export function Navbar() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  // const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue('brandblue.500', 'brandblue.600');
   const color = useColorModeValue('brandbeige.100', 'brandbeige.200');
 
@@ -70,14 +70,14 @@ export function Navbar() {
                       (13) 99668-0686
                     </Link>
                   </Button>
-                  <Button
+                  {/* <Button
                     variant={'outline'}
                     bgColor={bg}
                     _hover={{ bgColor: 'blue.800', color: 'whiteAlpha' }}
                     onClick={toggleColorMode}
                   >
                     {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-                  </Button>
+                  </Button> */}
                 </Stack>
               </Flex>
             </Flex>
